@@ -8,9 +8,17 @@ function horaatual(){
   let min = diaatual.getMinutes()
   let seg = diaatual.getSeconds()
 
-  hora.innerHTML = hr
-  minutos.innerHTML = min
-  segundos.innerHTML = seg
+  hora.innerHTML = ver(hr)
+  minutos.innerHTML = ver(min)
+  segundos.innerHTML = ver(seg)
 }
 
 setInterval(horaatual,100)
+
+function ver(numero){
+  if(numero < 10){
+    return "0" + numero
+  }else{
+    return numero
+  }
+}
